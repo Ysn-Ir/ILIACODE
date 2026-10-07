@@ -1,0 +1,10 @@
+.env
+__pycache__/
+.ipynb_checkpoints/
+*.pt
+*.pth
+*.safetensors
+*.gguf
+data/
+wandb/
+mlruns/
