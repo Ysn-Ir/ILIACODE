@@ -1,0 +1,63 @@
+## the full log
+
+**Everything installed, with versions:**
+
+```bash
+pip list > installed_packages.txt
+pip freeze > requirements.txt
+```
+
+**Everything installed, sorted by install time** (shows what was added when). Save this as `install_log.py`:
+
+```python
+import importlib.metadata as md, os, datetime
+
+rows = []
+for d in md.distributions():
+    t = datetime.datetime.fromtimestamp(os.path.getmtime(d._path))
+    rows.append((t, d.metadata["Name"], d.version))
+for t, name, ver in sorted(rows):
+    print(f"{t:%Y-%m-%d %H:%M}  {name}=={ver}")
+```
+
+Then run:
+
+```bash
+python install_log.py > install_log.txt
+```
+
+**Disk usage per package** (useful, since PyTorch and CUDA libraries are huge):
+
+```bash
+pip install pipdeptree
+pipdeptree --warn silence > dependency_tree.txt
+```
+
+Pip doesn't keep a history of past installs, so this is the closest you can get. From now on, `pip install <package> --log pip_log.txt` records an install as it happens.
+
+## What I can confirm from your output
+
+**Installed and working (38 packages):**
+
+| Area          | Packages                                                                                          |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| Core          | numpy (1.26.4), pandas 3.0.6, matplotlib 3.11.2, scipy 1.18.1                                     |
+| Deep learning | torch 2.14.1+cu126, torchvision 0.29.1, torchaudio 2.11.0                                         |
+| RL            | gymnasium 1.4.0                                                                                   |
+| NLP           | spacy 3.8.16 (with `en_core_web_sm`), tokenizers 0.23.2                                           |
+| Hugging Face  | transformers 5.19.0, datasets 5.1.0, accelerate 1.15.0, huggingface_hub 1.33.0, safetensors 0.8.0 |
+| Inference     | onnxruntime 1.30.0                                                                                |
+| RAG           | langchain 1.4.3, llama-index 0.14.25, faiss-cpu 1.15.1, chromadb 1.5.9, qdrant-client 1.19.1      |
+| Agents/APIs   | langgraph 1.2.14, crewai 1.15.24, openai 2.54.0, anthropic 1.12.0, pydantic 2.12.5, mcp 1.28.1    |
+| Web           | requests, httpx, beautifulsoup4, playwright, selenium, fastapi, uvicorn                           |
+| Tooling       | jupyterlab 4.6.4, python-dotenv, tqdm, rich                                                       |
+
+**Installed but broken (NumPy 1.26.4 vs SciPy):** scikit-learn, xgboost, lightgbm, catboost, seaborn, tensorflow, keras, stable-baselines3, nltk, gensim, evaluate, sentence-transformers. The fix is `pip install -U "numpy>=2.0,<2.8"`.
+
+**Not installed:** sentencepiece, peft, trl, bitsandbytes, optimum, llama-cpp-python, onnx, gradio, streamlit, wandb, mlflow.
+
+**Hardware confirmed:** NVIDIA GeForce RTX 4050 Laptop GPU, CUDA 12.6 build of PyTorch, Python 3.12.6.
+
+**Failed attempts:** `tensorflow[and-cuda]` failed twice, because `nvidia-nccl-cu12` has no Windows build. You may still have downloaded NVIDIA CUDA packages in pip's cache. `pip cache info` shows its size and `pip cache purge` frees the space.
+
+You can add `install_log.txt` and `requirements.txt` to your Git repo, but keep `installed_packages.txt` out of it if you prefer a clean history.

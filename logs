@@ -1,1 +1,531 @@
-TH
+## 10/8/2026
+
+for the first tp we have just made sure to install all the stuff needed for the enviroment inlcuding all the libraries for data preprocessing visualisation and also machine learning , pytorch , tensorflow , gymnasium , torchvision ,langchain , unsloth and many other here is the test results C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE>ls
+ILIACODE test.py
+
+# python test.py
+
+== Core ==
+[OK] numpy 1.26.4
+[OK] pandas 3.0.6
+[OK] matplotlib 3.11.2
+C:\Python312\Lib\importlib\_\_init\_\_.py:90: UserWarning: A NumPy version >=2.0.0 and <2.8.0 is required for this version of SciPy (detected version 1.26.4)
+return \_bootstrap.\_gcd_import(name[level:], package, level)
+[OK] scipy 1.18.1
+C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\ILIACODE\Lib\site-packages\scipy\sparse_sputils.py:17: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+np.uintc, np.long, np.ulong, np.longlong, np.ulonglong,
+[BROKEN] scikit-learn AttributeError: module 'numpy' has no attribute 'long'
+C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\ILIACODE\Lib\site-packages\scipy\sparse_sputils.py:17: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+np.uintc, np.long, np.ulong, np.longlong, np.ulonglong,
+[BROKEN] xgboost AttributeError: module 'numpy' has no attribute 'long'
+C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\ILIACODE\Lib\site-packages\scipy\sparse_sputils.py:17: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+np.uintc, np.long, np.ulong, np.longlong, np.ulonglong,
+[BROKEN] lightgbm AttributeError: module 'numpy' has no attribute 'long'
+C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\ILIACODE\Lib\site-packages\scipy\sparse_sputils.py:17: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+np.uintc, np.long, np.ulong, np.longlong, np.ulonglong,
+[BROKEN] catboost AttributeError: module 'numpy' has no attribute 'long'
+C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\ILIACODE\Lib\site-packages\scipy\sparse_sputils.py:17: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+np.uintc, np.long, np.ulong, np.longlong, np.ulonglong,
+C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\ILIACODE\Lib\site-packages\scipy\sparse_sputils.py:17: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+np.uintc, np.long, np.ulong, np.longlong, np.ulonglong,
+[BROKEN] seaborn AttributeError: module 'numpy' has no attribute 'long'
+
+== Deep learning ==
+[OK] torch 2.14.1+cu126
+[OK] torchvision 0.29.1+cu126
+[OK] torchaudio 2.11.0+cu126
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791412281.934737 64316 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\ILIACODE\Lib\site-packages\scipy\sparse_sputils.py:17: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+np.uintc, np.long, np.ulong, np.longlong, np.ulonglong,
+[BROKEN] tensorflow AttributeError: module 'numpy' has no attribute 'long'
+C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\ILIACODE\Lib\site-packages\scipy\sparse_sputils.py:17: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+np.uintc, np.long, np.ulong, np.longlong, np.ulonglong,
+[BROKEN] keras AttributeError: module 'numpy' has no attribute 'long'
+
+== RL ==
+[OK] gymnasium 1.4.0
+C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\ILIACODE\Lib\site-packages\scipy\sparse_sputils.py:17: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+np.uintc, np.long, np.ulong, np.longlong, np.ulonglong,
+[BROKEN] stable-baselines3 AttributeError: module 'numpy' has no attribute 'long'
+
+== NLP ==
+C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\ILIACODE\Lib\site-packages\scipy\sparse_sputils.py:17: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+np.uintc, np.long, np.ulong, np.longlong, np.ulonglong,
+C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\ILIACODE\Lib\site-packages\scipy\sparse_sputils.py:17: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+np.uintc, np.long, np.ulong, np.longlong, np.ulonglong,
+[BROKEN] nltk AttributeError: module 'numpy' has no attribute 'long'
+[OK] spacy 3.8.16
+C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\ILIACODE\Lib\site-packages\scipy\sparse_sputils.py:17: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+np.uintc, np.long, np.ulong, np.longlong, np.ulonglong,
+[BROKEN] gensim AttributeError: module 'numpy' has no attribute 'long'
+[MISSING] sentencepiece
+[OK] tokenizers 0.23.2
+
+== LLM / Hugging Face ==
+[OK] transformers 5.19.0
+[OK] datasets 5.1.0
+[OK] accelerate 1.15.0
+[OK] huggingface_hub 1.33.0
+[OK] safetensors 0.8.0
+C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\ILIACODE\Lib\site-packages\scipy\sparse_sputils.py:17: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+np.uintc, np.long, np.ulong, np.longlong, np.ulonglong,
+[BROKEN] evaluate AttributeError: module 'numpy' has no attribute 'long'
+
+== Fine-tuning / quantization ==
+[MISSING] peft
+[MISSING] trl
+[MISSING] bitsandbytes
+[MISSING] optimum
+[MISSING] llama-cpp-python
+[MISSING] onnx
+[OK] onnxruntime 1.30.0
+
+== RAG / vector DBs ==
+[OK] langchain 1.4.3
+[OK] llama-index 0.14.25
+C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\ILIACODE\Lib\site-packages\scipy\sparse_sputils.py:17: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+np.uintc, np.long, np.ulong, np.longlong, np.ulonglong,
+[BROKEN] sentence-transformers AttributeError: module 'numpy' has no attribute 'long'
+[OK] faiss-cpu 1.15.1
+[OK] chromadb 1.5.9
+[OK] qdrant-client 1.19.1
+
+== Agents / APIs ==
+[OK] langgraph 1.2.14
+[OK] crewai 1.15.24
+[OK] openai 2.54.0
+[OK] anthropic 1.12.0
+[OK] pydantic 2.12.5
+[OK] mcp 1.28.1
+
+== Web / serving ==
+[OK] requests 2.34.2
+[OK] httpx 0.28.1
+[OK] beautifulsoup4 4.15.0
+[OK] playwright 1.63.0
+[OK] selenium 4.50.0
+[OK] fastapi 0.142.4
+[OK] uvicorn 0.54.0
+[MISSING] gradio
+[MISSING] streamlit
+
+== Tooling ==
+[OK] jupyterlab 4.6.4
+[MISSING] wandb
+[MISSING] mlflow
+[OK] python-dotenv 1.2.4
+[OK] tqdm 4.70.1
+[OK] rich 14.3.4
+
+== GPU checks ==
+PyTorch 2.14.1+cu126 | CUDA build: 12.6 | GPU available: True
+GPU: NVIDIA GeForce RTX 4050 Laptop GPU
+C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\ILIACODE\Lib\site-packages\scipy\sparse_sputils.py:17: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+np.uintc, np.long, np.ulong, np.longlong, np.ulonglong,
+TensorFlow: not usable (AttributeError)
+
+== Quick functional test ==
+PyTorch LSTM output shape: (2, 5, 8) (expected (2, 5, 8))
+Gymnasium CartPole obs shape: (4,)
+spaCy model en_core_web_sm: loaded
+
+Summary: 38 OK, 11 missing, 12 broken
+Missing: sentencepiece, peft, trl, bitsandbytes, optimum, llama-cpp-python, onnx, gradio, streamlit, wandb, mlflow
+Broken (installed, import fails): scikit-learn, xgboost, lightgbm, catboost, seaborn, tensorflow, keras, stable-baselines3, nltk, gensim, evaluate, sentence-transformers
+
+(ILIACODE) C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE>pip install -U "numpy>=2.0,<2.8"
+Collecting numpy<2.8,>=2.0
+Using cached numpy-2.5.3-cp312-cp312-win_amd64.whl.metadata (6.6 kB)
+Using cached numpy-2.5.3-cp312-cp312-win_amd64.whl (12.6 MB)
+Installing collected packages: numpy
+Attempting uninstall: numpy
+Found existing installation: numpy 1.26.4
+Uninstalling numpy-1.26.4:
+Successfully uninstalled numpy-1.26.4
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+autogen-agentchat 0.2.40 requires numpy<2,>=1.17.0, but you have numpy 2.5.3 which is incompatible.
+Successfully installed numpy-2.5.3
+
+(ILIACODE) C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE>pip install -U scipy scikit-learnpip install tensorflow
+Requirement already satisfied: scipy in .\ILIACODE\Lib\site-packages (1.18.1)
+ERROR: Ignored the following versions that require a different python version: 1.10.0 Requires-Python >=3.8,<3.12; 1.10.0rc1 Requires-Python >=3.8,<3.12; 1.10.0rc2 Requires-Python >=3.8,<3.12; 1.10.1 Requires-Python >=3.8,<3.12; 1.6.2 Requires-Python >=3.7,<3.10; 1.6.3 Requires-Python >=3.7,<3.10; 1.7.0 Requires-Python >=3.7,<3.10; 1.7.1 Requires-Python >=3.7,<3.10; 1.7.2 Requires-Python >=3.7,<3.11; 1.7.3 Requires-Python >=3.7,<3.11; 1.8.0 Requires-Python >=3.8,<3.11; 1.8.0rc1 Requires-Python >=3.8,<3.11; 1.8.0rc2 Requires-Python >=3.8,<3.11; 1.8.0rc3 Requires-Python >=3.8,<3.11; 1.8.0rc4 Requires-Python >=3.8,<3.11; 1.8.1 Requires-Python >=3.8,<3.11; 1.9.0 Requires-Python >=3.8,<3.12; 1.9.0rc1 Requires-Python >=3.8,<3.12; 1.9.0rc2 Requires-Python >=3.8,<3.12; 1.9.0rc3 Requires-Python >=3.8,<3.12; 1.9.1 Requires-Python >=3.8,<3.12
+ERROR: Could not find a version that satisfies the requirement scikit-learnpip (from versions: none)
+ERROR: No matching distribution found for scikit-learnpip
+
+(ILIACODE) C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE>pip install sentencepiece peft trl optimum onnx gradio streamlit wandb mlflow
+Collecting sentencepiece
+Using cached sentencepiece-0.2.2-cp312-cp312-win*amd64.whl.metadata (34 kB)
+Collecting peft
+Using cached peft-0.21.2-py3-none-any.whl.metadata (15 kB)
+Collecting trl
+Using cached trl-1.14.2-py3-none-any.whl.metadata (12 kB)
+Collecting optimum
+Downloading optimum-2.3.0-py3-none-any.whl.metadata (14 kB)
+Collecting onnx
+Downloading onnx-1.23.2-cp312-abi3-win_amd64.whl.metadata (8.7 kB)
+Collecting gradio
+Using cached gradio-6.29.1-py3-none-any.whl.metadata (16 kB)
+Collecting streamlit
+Using cached streamlit-1.65.0-py3-none-any.whl.metadata (10 kB)
+Collecting wandb
+Using cached wandb-0.30.0-py3-none-win_amd64.whl.metadata (11 kB)
+Collecting mlflow
+Downloading mlflow-3.17.0-py3-none-any.whl.metadata (50 kB)
+Requirement already satisfied: numpy>=1.17 in .\ILIACODE\Lib\site-packages (from peft) (2.5.3)
+Requirement already satisfied: packaging>=20.0 in .\ILIACODE\Lib\site-packages (from peft) (26.3)
+Requirement already satisfied: psutil in .\ILIACODE\Lib\site-packages (from peft) (7.2.2)
+Requirement already satisfied: pyyaml in .\ILIACODE\Lib\site-packages (from peft) (6.0.3)
+Requirement already satisfied: torch>=1.13.0 in .\ILIACODE\Lib\site-packages (from peft) (2.14.1+cu126)
+Requirement already satisfied: transformers in .\ILIACODE\Lib\site-packages (from peft) (5.19.0)
+Requirement already satisfied: tqdm in .\ILIACODE\Lib\site-packages (from peft) (4.70.1)
+Requirement already satisfied: accelerate>=0.21.0 in .\ILIACODE\Lib\site-packages (from peft) (1.15.0)
+Requirement already satisfied: safetensors in .\ILIACODE\Lib\site-packages (from peft) (0.8.0)
+Requirement already satisfied: huggingface_hub>=0.25.0 in .\ILIACODE\Lib\site-packages (from peft) (1.33.0)
+Requirement already satisfied: datasets>=4.7.0 in .\ILIACODE\Lib\site-packages (from trl) (5.1.0)
+Requirement already satisfied: jinja2 in .\ILIACODE\Lib\site-packages (from trl) (3.1.6)
+Requirement already satisfied: protobuf>=6.31.1 in .\ILIACODE\Lib\site-packages (from onnx) (7.36.2)
+Requirement already satisfied: typing_extensions>=4.7.1 in .\ILIACODE\Lib\site-packages (from onnx) (4.16.0)
+Requirement already satisfied: ml_dtypes>=0.5.4 in .\ILIACODE\Lib\site-packages (from onnx) (0.6.0)
+Requirement already satisfied: anyio<5.0,>=3.0 in .\ILIACODE\Lib\site-packages (from gradio) (4.15.1)
+Collecting brotli>=1.1.0 (from gradio)
+Downloading brotli-1.2.0-cp312-cp312-win_amd64.whl.metadata (6.3 kB)
+Requirement already satisfied: fastapi<1.0,>=0.115.2 in .\ILIACODE\Lib\site-packages (from gradio) (0.142.4)
+Collecting gradio-client==2.7.2 (from gradio)
+Downloading gradio_client-2.7.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting groovy~=0.1 (from gradio)
+Downloading groovy-0.1.2-py3-none-any.whl.metadata (6.1 kB)
+Collecting hf-gradio<1.0,>=0.4.1 (from gradio)
+Downloading hf_gradio-0.4.1-py3-none-any.whl.metadata (428 bytes)
+Requirement already satisfied: httpx<1.0,>=0.24.1 in .\ILIACODE\Lib\site-packages (from gradio) (0.28.1)
+Requirement already satisfied: markupsafe<4.0,>=2.0 in .\ILIACODE\Lib\site-packages (from gradio) (3.0.4)
+Requirement already satisfied: orjson~=3.0 in .\ILIACODE\Lib\site-packages (from gradio) (3.13.0)
+Requirement already satisfied: pandas<4.0,>=1.0 in .\ILIACODE\Lib\site-packages (from gradio) (3.0.6)
+Requirement already satisfied: pillow<13.0,>=8.0 in .\ILIACODE\Lib\site-packages (from gradio) (12.3.0)
+Requirement already satisfied: pydantic<=3.0,>=2.0 in .\ILIACODE\Lib\site-packages (from gradio) (2.12.5)
+Collecting pydub<1.0 (from gradio)
+Using cached pydub-0.25.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Requirement already satisfied: python-multipart<1.0,>=0.0.18 in .\ILIACODE\Lib\site-packages (from gradio) (0.0.32)
+Requirement already satisfied: pytz>=2017.2 in .\ILIACODE\Lib\site-packages (from gradio) (2026.5)
+Collecting safehttpx<0.2.0,>=0.1.7 (from gradio)
+Downloading safehttpx-0.1.7-py3-none-any.whl.metadata (4.2 kB)
+Collecting semantic-version~=2.0 (from gradio)
+Downloading semantic_version-2.10.0-py2.py3-none-any.whl.metadata (9.7 kB)
+Requirement already satisfied: starlette<2.0,>=1.0.1 in .\ILIACODE\Lib\site-packages (from gradio) (1.7.0)
+Collecting tomlkit<0.15.0,>=0.12.0 (from gradio)
+Downloading tomlkit-0.14.0-py3-none-any.whl.metadata (2.8 kB)
+Requirement already satisfied: typer<1.0,>=0.12 in .\ILIACODE\Lib\site-packages (from gradio) (0.27.3)
+Requirement already satisfied: uvicorn>=0.14.0 in .\ILIACODE\Lib\site-packages (from gradio) (0.54.0)
+Requirement already satisfied: fsspec in .\ILIACODE\Lib\site-packages (from gradio-client==2.7.2->gradio) (2026.7.0)
+Requirement already satisfied: idna>=2.8 in .\ILIACODE\Lib\site-packages (from anyio<5.0,>=3.0->gradio) (3.20)
+Requirement already satisfied: typing-inspection>=0.4.2 in .\ILIACODE\Lib\site-packages (from fastapi<1.0,>=0.115.2->gradio) (0.4.4)
+Requirement already satisfied: annotated-doc>=0.0.2 in .\ILIACODE\Lib\site-packages (from fastapi<1.0,>=0.115.2->gradio) (0.0.5)
+Requirement already satisfied: opentelemetry-api>=1.44.0 in .\ILIACODE\Lib\site-packages (from fastapi<1.0,>=0.115.2->gradio) (1.45.1)
+Requirement already satisfied: certifi in .\ILIACODE\Lib\site-packages (from httpx<1.0,>=0.24.1->gradio) (2026.7.22)
+Requirement already satisfied: httpcore==1.* in .\ILIACODE\Lib\site-packages (from httpx<1.0,>=0.24.1->gradio) (1.0.9)
+Requirement already satisfied: h11>=0.16 in .\ILIACODE\Lib\site-packages (from httpcore==1.\_->httpx<1.0,>=0.24.1->gradio) (0.16.0)
+Requirement already satisfied: click<9.0.0,>=8.4.2 in .\ILIACODE\Lib\site-packages (from huggingface_hub>=0.25.0->peft) (8.5.0)
+Requirement already satisfied: filelock>=3.10.0 in .\ILIACODE\Lib\site-packages (from huggingface_hub>=0.25.0->peft) (3.32.7)
+Requirement already satisfied: hf-xet<2.0.0,>=1.6.0 in .\ILIACODE\Lib\site-packages (from huggingface_hub>=0.25.0->peft) (1.7.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in .\ILIACODE\Lib\site-packages (from pandas<4.0,>=1.0->gradio) (2.9.0.post0)
+Requirement already satisfied: tzdata in .\ILIACODE\Lib\site-packages (from pandas<4.0,>=1.0->gradio) (2026.5)
+Requirement already satisfied: annotated-types>=0.6.0 in .\ILIACODE\Lib\site-packages (from pydantic<=3.0,>=2.0->gradio) (0.8.0)
+Requirement already satisfied: pydantic-core==2.41.5 in .\ILIACODE\Lib\site-packages (from pydantic<=3.0,>=2.0->gradio) (2.41.5)
+Requirement already satisfied: shellingham>=1.3.0 in .\ILIACODE\Lib\site-packages (from typer<1.0,>=0.12->gradio) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in .\ILIACODE\Lib\site-packages (from typer<1.0,>=0.12->gradio) (14.3.4)
+Requirement already satisfied: colorama in .\ILIACODE\Lib\site-packages (from typer<1.0,>=0.12->gradio) (0.4.6)
+Collecting altair!=5.4.0,!=5.4.1,<7,>=5.0.0 (from streamlit)
+Downloading altair-6.3.0-py3-none-any.whl.metadata (11 kB)
+Collecting pydeck<1,>=0.8.0b4 (from streamlit)
+Downloading pydeck-0.9.3-py2.py3-none-any.whl.metadata (4.2 kB)
+Requirement already satisfied: pyarrow!=25.0.0,<26,>=7.0 in .\ILIACODE\Lib\site-packages (from streamlit) (25.0.1)
+Requirement already satisfied: requests<3,>=2.27 in .\ILIACODE\Lib\site-packages (from streamlit) (2.34.2)
+Collecting toml<2,>=0.10.1 (from streamlit)
+Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+Requirement already satisfied: httptools<1,>=0.6.3 in .\ILIACODE\Lib\site-packages (from streamlit) (0.8.0)
+Requirement already satisfied: websockets<18,>=12.0.0 in .\ILIACODE\Lib\site-packages (from streamlit) (16.1.1)
+Collecting itsdangerous<3,>=2.1.2 (from streamlit)
+Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting watchdog<7,>=2.1.5 (from streamlit)
+Downloading watchdog-6.0.0-py3-none-win_amd64.whl.metadata (44 kB)
+Requirement already satisfied: jsonschema>=3.0 in .\ILIACODE\Lib\site-packages (from altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit) (4.26.0)
+Requirement already satisfied: narwhals>=2.4.0 in .\ILIACODE\Lib\site-packages (from altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit) (2.26.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in .\ILIACODE\Lib\site-packages (from requests<3,>=2.27->streamlit) (3.5.2)
+Requirement already satisfied: urllib3<3,>=1.26 in .\ILIACODE\Lib\site-packages (from requests<3,>=2.27->streamlit) (2.8.0)
+Requirement already satisfied: opentelemetry-exporter-otlp-proto-http>=1.43.0 in .\ILIACODE\Lib\site-packages (from wandb) (1.45.1)
+Requirement already satisfied: opentelemetry-sdk>=1.43.0 in .\ILIACODE\Lib\site-packages (from wandb) (1.45.1)
+Requirement already satisfied: platformdirs in .\ILIACODE\Lib\site-packages (from wandb) (4.12.3)
+Requirement already satisfied: xxhash>=3.0.0 in .\ILIACODE\Lib\site-packages (from wandb) (4.0.1)
+Collecting mlflow-skinny==3.17.0 (from mlflow)
+Downloading mlflow_skinny-3.17.0-py3-none-any.whl.metadata (51 kB)
+Collecting mlflow-tracing==3.17.0 (from mlflow)
+Downloading mlflow_tracing-3.17.0-py3-none-any.whl.metadata (19 kB)
+Collecting Flask-CORS<7 (from mlflow)
+Downloading flask_cors-6.0.5-py3-none-any.whl.metadata (5.4 kB)
+Collecting Flask<4 (from mlflow)
+Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+Requirement already satisfied: aiohttp<4,>=3.7.0 in .\ILIACODE\Lib\site-packages (from mlflow) (3.14.4)
+Collecting alembic!=1.10.0,<2 (from mlflow)
+Downloading alembic-1.20.0-py3-none-any.whl.metadata (7.3 kB)
+Requirement already satisfied: cryptography<51,>=43.0.0 in .\ILIACODE\Lib\site-packages (from mlflow) (50.0.2)
+Requirement already satisfied: docker<8,>=4.0.0 in .\ILIACODE\Lib\site-packages (from mlflow) (7.2.0)
+Collecting graphene<4 (from mlflow)
+Downloading graphene-3.4.3-py2.py3-none-any.whl.metadata (6.9 kB)
+Collecting huey<4,>=2.5.4 (from mlflow)
+Downloading huey-3.4.0-py3-none-any.whl.metadata (5.7 kB)
+Requirement already satisfied: matplotlib<4 in .\ILIACODE\Lib\site-packages (from mlflow) (3.11.2)
+Requirement already satisfied: scikit-learn<2 in .\ILIACODE\Lib\site-packages (from mlflow) (1.9.1)
+Requirement already satisfied: scipy<2 in .\ILIACODE\Lib\site-packages (from mlflow) (1.18.1)
+Collecting skops<1 (from mlflow)
+Downloading skops-0.16.0-py3-none-any.whl.metadata (4.3 kB)
+Requirement already satisfied: sqlalchemy<3,>=1.4.0 in .\ILIACODE\Lib\site-packages (from mlflow) (2.1.4)
+Collecting waitress<4 (from mlflow)
+Downloading waitress-3.0.2-py3-none-any.whl.metadata (5.8 kB)
+Collecting cachetools<8,>=5.0.0 (from mlflow-skinny==3.17.0->mlflow)
+Downloading cachetools-7.2.1-py3-none-any.whl.metadata (5.5 kB)
+Requirement already satisfied: cloudpickle<4 in .\ILIACODE\Lib\site-packages (from mlflow-skinny==3.17.0->mlflow) (3.1.2)
+Collecting databricks-sdk<1,>=0.20.0 (from mlflow-skinny==3.17.0->mlflow)
+Downloading databricks_sdk-0.148.0-py3-none-any.whl.metadata (44 kB)
+Collecting gitpython<4,>=3.1.9 (from mlflow-skinny==3.17.0->mlflow)
+Downloading gitpython-3.2.0-py3-none-any.whl.metadata (13 kB)
+Collecting importlib_metadata!=4.7.0,<10,>=3.7.0 (from mlflow-skinny==3.17.0->mlflow)
+Downloading importlib_metadata-9.0.1-py3-none-any.whl.metadata (4.5 kB)
+Requirement already satisfied: opentelemetry-proto<3,>=1.9.0 in .\ILIACODE\Lib\site-packages (from mlflow-skinny==3.17.0->mlflow) (1.45.1)
+Requirement already satisfied: python-dotenv<2,>=0.19.0 in .\ILIACODE\Lib\site-packages (from mlflow-skinny==3.17.0->mlflow) (1.2.4)
+Collecting sqlparse<1,>=0.4.0 (from mlflow-skinny==3.17.0->mlflow)
+Downloading sqlparse-0.6.0-py3-none-any.whl.metadata (6.0 kB)
+Requirement already satisfied: aiohappyeyeballs>=2.5.0 in .\ILIACODE\Lib\site-packages (from aiohttp<4,>=3.7.0->mlflow) (2.7.1)
+Requirement already satisfied: aiosignal>=1.4.0 in .\ILIACODE\Lib\site-packages (from aiohttp<4,>=3.7.0->mlflow) (1.4.0)
+Requirement already satisfied: attrs>=17.3.0 in .\ILIACODE\Lib\site-packages (from aiohttp<4,>=3.7.0->mlflow) (26.1.0)
+Requirement already satisfied: frozenlist>=1.1.1 in .\ILIACODE\Lib\site-packages (from aiohttp<4,>=3.7.0->mlflow) (1.8.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in .\ILIACODE\Lib\site-packages (from aiohttp<4,>=3.7.0->mlflow) (6.9.1)
+Requirement already satisfied: propcache>=0.2.0 in .\ILIACODE\Lib\site-packages (from aiohttp<4,>=3.7.0->mlflow) (0.5.4)
+Requirement already satisfied: yarl<2.0,>=1.25.1 in .\ILIACODE\Lib\site-packages (from aiohttp<4,>=3.7.0->mlflow) (1.25.1)
+Collecting Mako (from alembic!=1.10.0,<2->mlflow)
+Downloading mako-1.4.3-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: cffi>=2.0.0 in .\ILIACODE\Lib\site-packages (from cryptography<51,>=43.0.0->mlflow) (2.1.1)
+Collecting google-auth~=2.0 (from databricks-sdk<1,>=0.20.0->mlflow-skinny==3.17.0->mlflow)
+Downloading google_auth-2.61.0-py3-none-any.whl.metadata (6.0 kB)
+Collecting protobuf>=6.31.1 (from onnx)
+Downloading protobuf-6.33.6-cp310-abi3-win_amd64.whl.metadata (593 bytes)
+Requirement already satisfied: pywin32>=304 in .\ILIACODE\Lib\site-packages (from docker<8,>=4.0.0->mlflow) (312)
+Collecting blinker>=1.9.0 (from Flask<4->mlflow)
+Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Requirement already satisfied: werkzeug>=3.1.0 in .\ILIACODE\Lib\site-packages (from Flask<4->mlflow) (3.1.9)
+Collecting gitdb<5,>=4.0.1 (from gitpython<4,>=3.1.9->mlflow-skinny==3.17.0->mlflow)
+Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython<4,>=3.1.9->mlflow-skinny==3.17.0->mlflow)
+Downloading smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting pyasn1-modules>=0.2.1 (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==3.17.0->mlflow)
+Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+Collecting graphql-core<3.3,>=3.1 (from graphene<4->mlflow)
+Downloading graphql_core-3.2.13-py3-none-any.whl.metadata (11 kB)
+Collecting graphql-relay<3.3,>=3.1 (from graphene<4->mlflow)
+Downloading graphql_relay-3.2.0-py3-none-any.whl.metadata (12 kB)
+Collecting zipp>=3.20 (from importlib_metadata!=4.7.0,<10,>=3.7.0->mlflow-skinny==3.17.0->mlflow)
+Downloading zipp-4.1.1-py3-none-any.whl.metadata (3.6 kB)
+Requirement already satisfied: contourpy>=1.0.1 in .\ILIACODE\Lib\site-packages (from matplotlib<4->mlflow) (1.4.0)
+Requirement already satisfied: cycler>=0.10 in .\ILIACODE\Lib\site-packages (from matplotlib<4->mlflow) (0.12.1)
+Requirement already satisfied: fonttools>=4.28.2 in .\ILIACODE\Lib\site-packages (from matplotlib<4->mlflow) (4.66.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in .\ILIACODE\Lib\site-packages (from matplotlib<4->mlflow) (1.5.1)
+Requirement already satisfied: pyparsing>=3 in .\ILIACODE\Lib\site-packages (from matplotlib<4->mlflow) (3.3.3)
+Requirement already satisfied: opentelemetry-semantic-conventions==0.66b1 in .\ILIACODE\Lib\site-packages (from opentelemetry-sdk>=1.43.0->wandb) (0.66b1)
+Requirement already satisfied: six>=1.5 in .\ILIACODE\Lib\site-packages (from python-dateutil>=2.8.2->pandas<4.0,>=1.0->gradio) (1.17.0)
+Requirement already satisfied: joblib>=1.4.0 in .\ILIACODE\Lib\site-packages (from scikit-learn<2->mlflow) (1.6.0)
+Requirement already satisfied: threadpoolctl>=3.5.0 in .\ILIACODE\Lib\site-packages (from scikit-learn<2->mlflow) (3.7.0)
+Collecting prettytable>=3.9 (from skops<1->mlflow)
+Downloading prettytable-3.18.0-py3-none-any.whl.metadata (37 kB)
+Requirement already satisfied: pycparser in .\ILIACODE\Lib\site-packages (from cffi>=2.0.0->cryptography<51,>=43.0.0->mlflow) (3.0)
+Requirement already satisfied: dill<0.4.2,>=0.3.0 in .\ILIACODE\Lib\site-packages (from datasets>=4.7.0->trl) (0.4.1)
+Requirement already satisfied: multiprocess<0.70.20 in .\ILIACODE\Lib\site-packages (from datasets>=4.7.0->trl) (0.70.19)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in .\ILIACODE\Lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in .\ILIACODE\Lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit) (0.37.0)
+Requirement already satisfied: rpds-py>=0.25.0 in .\ILIACODE\Lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit) (2026.9.1)
+Requirement already satisfied: googleapis-common-protos~=1.52 in .\ILIACODE\Lib\site-packages (from opentelemetry-exporter-otlp-proto-http>=1.43.0->wandb) (1.75.5)
+Requirement already satisfied: opentelemetry-exporter-http-transport==0.66b1 in .\ILIACODE\Lib\site-packages (from opentelemetry-exporter-http-transport[requests]==0.66b1->opentelemetry-exporter-otlp-proto-http>=1.43.0->wandb) (0.66b1)
+Requirement already satisfied: opentelemetry-exporter-otlp-common==0.66b1 in .\ILIACODE\Lib\site-packages (from opentelemetry-exporter-otlp-proto-http>=1.43.0->wandb) (0.66b1)
+Requirement already satisfied: opentelemetry-exporter-otlp-proto-common==1.45.1 in .\ILIACODE\Lib\site-packages (from opentelemetry-exporter-otlp-proto-http>=1.43.0->wandb) (1.45.1)
+Requirement already satisfied: wcwidth>=0.3.5 in .\ILIACODE\Lib\site-packages (from prettytable>=3.9->skops<1->mlflow) (0.9.2)
+Collecting pyasn1<0.7.0,>=0.6.1 (from pyasn1-modules>=0.2.1->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==3.17.0->mlflow)
+Using cached pyasn1-0.6.4-py3-none-any.whl.metadata (8.4 kB)
+Requirement already satisfied: markdown-it-py>=2.2.0 in .\ILIACODE\Lib\site-packages (from rich>=13.8.0->typer<1.0,>=0.12->gradio) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in .\ILIACODE\Lib\site-packages (from rich>=13.8.0->typer<1.0,>=0.12->gradio) (2.21.0)
+Requirement already satisfied: mdurl~=0.1 in .\ILIACODE\Lib\site-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer<1.0,>=0.12->gradio) (0.1.2)
+Requirement already satisfied: setuptools>=77.0.3 in .\ILIACODE\Lib\site-packages (from torch>=1.13.0->peft) (84.0.0)
+Requirement already satisfied: sympy>=1.13.3 in .\ILIACODE\Lib\site-packages (from torch>=1.13.0->peft) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in .\ILIACODE\Lib\site-packages (from torch>=1.13.0->peft) (3.7)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in .\ILIACODE\Lib\site-packages (from sympy>=1.13.3->torch>=1.13.0->peft) (1.3.0)
+Requirement already satisfied: regex>=2025.10.22 in .\ILIACODE\Lib\site-packages (from transformers->peft) (2026.1.15)
+Requirement already satisfied: tokenizers<0.24.0,>=0.23.1 in .\ILIACODE\Lib\site-packages (from transformers->peft) (0.23.2)
+Downloading sentencepiece-0.2.2-cp312-cp312-win_amd64.whl (1.2 MB)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 7.9 MB/s 0:00:00
+Downloading peft-0.21.2-py3-none-any.whl (835 kB)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 835.4/835.4 kB 38.2 MB/s 0:00:00
+Downloading trl-1.14.2-py3-none-any.whl (927 kB)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 927.2/927.2 kB 41.6 MB/s 0:00:00
+Downloading optimum-2.3.0-py3-none-any.whl (160 kB)
+Downloading onnx-1.23.2-cp312-abi3-win_amd64.whl (7.9 MB)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.9/7.9 MB 10.6 MB/s 0:00:00
+Downloading gradio-6.29.1-py3-none-any.whl (31.4 MB)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 31.4/31.4 MB 4.5 MB/s 0:00:06
+Downloading gradio_client-2.7.2-py3-none-any.whl (64 kB)
+Downloading groovy-0.1.2-py3-none-any.whl (14 kB)
+Downloading hf_gradio-0.4.1-py3-none-any.whl (4.5 kB)
+Using cached pydub-0.25.1-py2.py3-none-any.whl (32 kB)
+Downloading safehttpx-0.1.7-py3-none-any.whl (9.0 kB)
+Downloading semantic_version-2.10.0-py2.py3-none-any.whl (15 kB)
+Downloading tomlkit-0.14.0-py3-none-any.whl (39 kB)
+Downloading streamlit-1.65.0-py3-none-any.whl (10.3 MB)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.3/10.3 MB 5.5 MB/s 0:00:01
+Downloading altair-6.3.0-py3-none-any.whl (797 kB)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 797.2/797.2 kB 4.9 MB/s 0:00:00
+Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading pydeck-0.9.3-py2.py3-none-any.whl (11.4 MB)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.4/11.4 MB 6.1 MB/s 0:00:01
+Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Downloading watchdog-6.0.0-py3-none-win_amd64.whl (79 kB)
+Downloading wandb-0.30.0-py3-none-win_amd64.whl (24.1 MB)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.1/24.1 MB 6.1 MB/s 0:00:03
+Downloading mlflow-3.17.0-py3-none-any.whl (12.0 MB)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 3.4 MB/s 0:00:03
+Downloading mlflow_skinny-3.17.0-py3-none-any.whl (4.1 MB)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.1/4.1 MB 4.1 MB/s 0:00:01
+Downloading mlflow_tracing-3.17.0-py3-none-any.whl (2.0 MB)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 4.4 MB/s 0:00:00
+Downloading alembic-1.20.0-py3-none-any.whl (268 kB)
+Downloading cachetools-7.2.1-py3-none-any.whl (17 kB)
+Downloading databricks_sdk-0.148.0-py3-none-any.whl (1.1 MB)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 4.4 MB/s 0:00:00
+Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+Downloading flask_cors-6.0.5-py3-none-any.whl (16 kB)
+Downloading gitpython-3.2.0-py3-none-any.whl (228 kB)
+Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+Downloading google_auth-2.61.0-py3-none-any.whl (268 kB)
+Downloading graphene-3.4.3-py2.py3-none-any.whl (114 kB)
+Downloading graphql_core-3.2.13-py3-none-any.whl (268 kB)
+Downloading graphql_relay-3.2.0-py3-none-any.whl (16 kB)
+Downloading huey-3.4.0-py3-none-any.whl (136 kB)
+Downloading importlib_metadata-9.0.1-py3-none-any.whl (27 kB)
+Downloading protobuf-6.33.6-cp310-abi3-win_amd64.whl (437 kB)
+Downloading skops-0.16.0-py3-none-any.whl (148 kB)
+Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+Downloading sqlparse-0.6.0-py3-none-any.whl (50 kB)
+Downloading waitress-3.0.2-py3-none-any.whl (56 kB)
+Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Downloading brotli-1.2.0-cp312-cp312-win_amd64.whl (369 kB)
+Downloading prettytable-3.18.0-py3-none-any.whl (37 kB)
+Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+Using cached pyasn1-0.6.4-py3-none-any.whl (84 kB)
+Downloading zipp-4.1.1-py3-none-any.whl (10 kB)
+Downloading mako-1.4.3-py3-none-any.whl (80 kB)
+Installing collected packages: pydub, huey, brotli, zipp, watchdog, waitress, tomlkit, toml, sqlparse, smmap, sentencepiece, semantic-version, pyasn1, protobuf, prettytable, Mako, itsdangerous, groovy, graphql-core, cachetools, blinker, pydeck, pyasn1-modules, onnx, importlib_metadata, graphql-relay, gitdb, Flask, alembic, skops, safehttpx, graphene, google-auth, gitpython, Flask-CORS, gradio-client, databricks-sdk, altair, streamlit, mlflow-tracing, mlflow-skinny, hf-gradio, wandb, trl, peft, optimum, mlflow, gradio
+Attempting uninstall: protobuf
+Found existing installation: protobuf 7.36.2
+Uninstalling protobuf-7.36.2:
+Successfully uninstalled protobuf-7.36.2
+Successfully installed Flask-3.1.3 Flask-CORS-6.0.5 Mako-1.4.3 alembic-1.20.0 altair-6.3.0 blinker-1.9.0 brotli-1.2.0 cachetools-7.2.1 databricks-sdk-0.148.0 gitdb-4.0.12 gitpython-3.2.0 google-auth-2.61.0 gradio-6.29.1 gradio-client-2.7.2 graphene-3.4.3 graphql-core-3.2.13 graphql-relay-3.2.0 groovy-0.1.2 hf-gradio-0.4.1 huey-3.4.0 importlib_metadata-9.0.1 itsdangerous-2.2.0 mlflow-3.17.0 mlflow-skinny-3.17.0 mlflow-tracing-3.17.0 onnx-1.23.2 optimum-2.3.0 peft-0.21.2 prettytable-3.18.0 protobuf-6.33.6 pyasn1-0.6.4 pyasn1-modules-0.4.2 pydeck-0.9.3 pydub-0.25.1 safehttpx-0.1.7 semantic-version-2.10.0 sentencepiece-0.2.2 skops-0.16.0 smmap-5.0.3 sqlparse-0.6.0 streamlit-1.65.0 toml-0.10.2 tomlkit-0.14.0 trl-1.14.2 waitress-3.0.2 wandb-0.30.0 watchdog-6.0.0 zipp-4.1.1
+
+(ILIACODE) C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE>pip install bitsandbytes
+
+(ILIACODE) C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE>python test.py
+Python 3.12.6 at C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\ILIACODE\Scripts\python.exe
+
+== Core ==
+[OK] numpy 2.5.3
+[OK] pandas 3.0.6
+[OK] matplotlib 3.11.2
+[OK] scipy 1.18.1
+[OK] scikit-learn 1.9.1
+[OK] xgboost 3.4.1
+[OK] lightgbm 4.7.0
+[OK] catboost 1.2.10
+[OK] seaborn 0.13.2
+
+== Deep learning ==
+[OK] torch 2.14.1+cu126
+[OK] torchvision 0.29.1+cu126
+[OK] torchaudio 2.11.0+cu126
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791416253.307694 63840 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791416260.665684 63840 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+[OK] tensorflow 2.21.0
+[OK] keras 3.15.1
+
+== RL ==
+[OK] gymnasium 1.4.0
+[OK] stable-baselines3 2.9.0
+
+== NLP ==
+[OK] nltk 3.10.3
+[OK] spacy 3.8.16
+[OK] gensim 4.4.0
+[OK] sentencepiece 0.2.2
+[OK] tokenizers 0.23.2
+
+== LLM / Hugging Face ==
+[OK] transformers 5.19.0
+[OK] datasets 5.1.0
+[OK] accelerate 1.15.0
+[OK] huggingface_hub 1.33.0
+[OK] safetensors 0.8.0
+[OK] evaluate 0.4.6
+
+== Fine-tuning / quantization ==
+W1007 23:38:10.272000 65256 ILIACODE\Lib\site-packages\torch\utils\flop_counter.py:113] triton not found; flop counting will not work for triton kernels
+[OK] peft 0.21.2
+[OK] trl 1.14.2
+[OK] bitsandbytes 0.50.2
+[OK] optimum 2.3.0
+[MISSING] llama-cpp-python
+[OK] onnx 1.23.2
+[OK] onnxruntime 1.30.0
+
+== RAG / vector DBs ==
+[OK] langchain 1.4.3
+[OK] llama-index 0.14.25
+[OK] sentence-transformers 6.1.0
+[OK] faiss-cpu 1.15.1
+[OK] chromadb 1.5.9
+[OK] qdrant-client 1.19.1
+
+== Agents / APIs ==
+[OK] langgraph 1.2.14
+[OK] crewai 1.15.24
+[OK] openai 2.54.0
+[OK] anthropic 1.12.0
+[OK] pydantic 2.12.5
+[OK] mcp 1.28.1
+
+== Web / serving ==
+[OK] requests 2.34.2
+[OK] httpx 0.28.1
+[OK] beautifulsoup4 4.15.0
+[OK] playwright 1.63.0
+[OK] selenium 4.50.0
+[OK] fastapi 0.142.4
+[OK] uvicorn 0.54.0
+[OK] gradio 6.29.1
+[OK] streamlit 1.65.0
+
+== Tooling ==
+[OK] jupyterlab 4.6.4
+[OK] wandb 0.30.0
+[OK] mlflow 3.17.0
+[OK] python-dotenv 1.2.4
+[OK] tqdm 4.70.1
+[OK] rich 14.3.4
+
+== GPU checks ==
+PyTorch 2.14.1+cu126 | CUDA build: 12.6 | GPU available: True
+GPU: NVIDIA GeForce RTX 4050 Laptop GPU
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+TensorFlow GPUs: []
+
+== Quick functional test ==
+PyTorch LSTM output shape: (2, 5, 8) (expected (2, 5, 8))
+Gymnasium CartPole obs shape: (4,)
+spaCy model en_core_web_sm: loaded
+
+Summary: 60 OK, 1 missing, 0 broken
+Missing: llama-cpp-python
