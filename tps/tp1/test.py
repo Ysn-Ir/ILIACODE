@@ -1,5 +1,4 @@
 
-!pip install pytest
 
 def saluer(nom): return "Bonjour " + nom
 

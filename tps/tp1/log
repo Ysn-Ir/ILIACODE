@@ -61,3 +61,17 @@ Pip doesn't keep a history of past installs, so this is the closest you can get.
 **Failed attempts:** `tensorflow[and-cuda]` failed twice, because `nvidia-nccl-cu12` has no Windows build. You may still have downloaded NVIDIA CUDA packages in pip's cache. `pip cache info` shows its size and `pip cache purge` frees the space.
 
 You can add `install_log.txt` and `requirements.txt` to your Git repo, but keep `installed_packages.txt` out of it if you prefer a clean history.
+
+adding the test functions :
+the fetched results are :
+
+pytest test.py
+========================================= test session starts ==========================================
+platform win32 -- Python 3.12.6, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\project\tps\tp1
+plugins: anyio-4.15.1, langsmith-0.14.4, platformdirs-4.12.3
+collected 2 items
+
+test.py .. [100%]
+
+========================================== 2 passed in 0.04s ===========================================
