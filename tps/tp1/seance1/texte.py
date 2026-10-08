@@ -16,18 +16,17 @@ MOTIF = r'\w+|[^\w\s]'   # le cœur, à compléter à gauche par les règles de 
 def lire(chemin, regle="utf-8"):
     """Bloc Lire. Ouvre le fichier en octets puis les décode en caractères."""
     # 1. ouvrir le fichier en mode binaire "rb" et lire ses octets
-    data=""
-    with open(chemin ,mode="rb"  ,encoding=regle) as file:
-        for line in file:
-            data+=line
-    return data
+    with open(chemin ,"rb") as file:
+        octets=file.read()
+    return octets.decode(regle)
 
 
-def reparer(texte):
+def reparer(text):
     """Bloc Réparer. Corrige les mojibakes, laisse intact un texte sain."""
     # une ligne, ftfy.fix_text(texte, normalization=None)
     # normalization=None, car normaliser est l'étape suivante, pas celle-ci
-    raise NotImplementedError("bloc Réparer à compléter")
+    return ftfy.fix_text(text , normalization=None)
+    
 
 
 def normaliser(texte, forme="NFKC"):
