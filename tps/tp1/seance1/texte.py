@@ -10,7 +10,8 @@ from collections import Counter
 import ftfy
 
 CHIFFRES_ARABES = str.maketrans("٠١٢٣٤٥٦٧٨٩", "0123456789")
-MOTIF = r'\w+|[^\w\s]'   # le cœur, à compléter à gauche par les règles de protection
+MOTIF = r'"[^"]*"|#.*|\d+\.\d+|!=|<=|>=|\w+|[^\w\s]'
+   # le cœur, à compléter à gauche par les règles de protection
 
 
 def lire(chemin, regle="utf-8"):
@@ -35,15 +36,27 @@ def normaliser(texte, forme="NFKC"):
     # 2. supprimer les diacritiques arabes, de \u064B à \u065F, avec re.sub
     # 3. supprimer le tatweel \u0640 avec replace
     # 4. convertir les chiffres arabes avec translate et CHIFFRES_ARABES
-    raise NotImplementedError("bloc Normaliser à compléter")
+    texte = unicodedata.normalize(forme,texte)
+    texte = re.sub("[\u064B-\u065F]", "", texte)
+    texte = texte.replace("\u0640", "")
+    texte = texte.translate(CHIFFRES_ARABES)
+    return texte
 
 
 def tokeniser(texte):
     """Bloc Tokeniser. Six règles, protéger d'abord, découper ensuite."""
+
     # 1. re.findall(MOTIF, texte) applique les règles 1 à 5
+    # return re.findall(MOTIF, texte)
     # 2. règle 6, pour chaque token qui est un mot et contient un tiret bas,
     #    garder le token puis ajouter ses composants, token.split("_")
-    raise NotImplementedError("bloc Tokeniser à compléter")
+    tokens = []
+    for token in re.findall(MOTIF, texte):
+        tokens.append(token)
+        if "_" in token and re.fullmatch(r"\w+", token):
+            tokens.extend(c for c in token.split("_") if c)
+    return tokens
+
 
 
 def mesurer(tokens):
