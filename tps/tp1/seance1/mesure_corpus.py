@@ -19,7 +19,7 @@ for fichier in sorted(DOSSIER.glob("*.py")):
 # ---- Zipf, la fréquence selon le rang ----
 classement = mesurer(mots).most_common()
 print("rang  token        fréquence  rang x fréquence")
-for rang in (1, 2, 3, 10, 100):
+for rang in (1, 2, 3, 10, 100 ,500,1000):
     token, f = classement[rang - 1]
     print(f"{rang:<5} {token:<12} {f:<10} {rang * f}")
 

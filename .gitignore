@@ -9,3 +9,5 @@ data/
 wandb/
 mlruns/
 *.zip
+donnees/
+data/

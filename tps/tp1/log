@@ -92,3 +92,21 @@ Type "help", "copyright", "credits" or "license" for more information.
 > > > 'crثث'
 > > > len(text)
 > > > 4
+
+# adding the frequency of mesure_courpus
+
+python c:/Users/khali/OneDrive/Bureau/learning/nlp/ILIACODE/project/tps/tp1/seance1/mesure_corpus.py
+rang token fréquence rang x fréquence
+1 self 19569 19569
+2 if 9695 19390
+3 return 6677 20031
+10 not 3173 31730
+100 of 445 44500
+500 col 80 40000
+1000 SELECTED 38 38000
+
+mots lus N vocabulaire V
+1000 299
+10000 1384
+100000 6568
+334269 19984

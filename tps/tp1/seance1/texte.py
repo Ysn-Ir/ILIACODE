@@ -62,8 +62,7 @@ def tokeniser(texte):
 def mesurer(tokens):
     """Bloc Mesurer. Fréquence de chaque token distinct."""
     # une ligne, Counter(tokens)
-    raise NotImplementedError("bloc Mesurer à compléter")
-
+    return Counter(tokens)
 
 def chaine(chemin, regle="utf-8"):
     """La chaîne complète, du fichier aux tokens."""
