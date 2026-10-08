@@ -75,3 +75,20 @@ collected 2 items
 test.py .. [100%]
 
 ========================================== 2 passed in 0.04s ===========================================
+
+# trying encoding decoding with utf-8
+
+(ILIACODE) C:\Users\khali\OneDrive\Bureau\learning\nlp\ILIACODE\project>python
+Python 3.12.6 (tags/v3.12.6:a4a2d2b, Sep 6 2024, 20:11:23) [MSC v.1940 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+
+> > > octets="crثث".encode("utf-8")
+> > > octets
+> > > b'cr\xd8\xab\xd8\xab'
+> > > len(octets)
+> > > 6
+> > > text=octets.decode("utf-8")
+> > > text
+> > > 'crثث'
+> > > len(text)
+> > > 4

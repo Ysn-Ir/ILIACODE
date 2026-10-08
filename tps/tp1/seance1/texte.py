@@ -16,8 +16,11 @@ MOTIF = r'\w+|[^\w\s]'   # le cœur, à compléter à gauche par les règles de 
 def lire(chemin, regle="utf-8"):
     """Bloc Lire. Ouvre le fichier en octets puis les décode en caractères."""
     # 1. ouvrir le fichier en mode binaire "rb" et lire ses octets
-    # 2. décoder ces octets avec la règle reçue, puis renvoyer le texte
-    raise NotImplementedError("bloc Lire à compléter")
+    data=""
+    with open(chemin ,mode="rb"  ,encoding=regle) as file:
+        for line in file:
+            data+=line
+    return data
 
 
 def reparer(texte):
