@@ -40,8 +40,7 @@ def pretokeniser(texte):
 def en_octets(mot):
     """Écrit un mot comme suite de symboles de base, un par octet UTF-8,
     close par le marqueur de fin de mot."""
-    raise NotImplementedError("partie 1 du TP")
-
+    return [chr(b) for b in mot.encode('utf-8')]+[FIN]
 
 def longueur(symbole):
     """Nombre de symboles de base dans un symbole, le marqueur comptant pour un."""
@@ -64,6 +63,9 @@ def compter_paires(corpus):
     Renvoie le compte de chaque paire de symboles adjacents, pondéré par la
     fréquence des mots."""
     raise NotImplementedError("partie 3 du TP")
+    counts={}
+    for pair in zip(corpus, corpus[1:]):
+        counts[pair]=counts.get(pair,0)+1
 
 
 def fusionner_mot(paire, symboles):
