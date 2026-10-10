@@ -147,7 +147,7 @@ def decoder(tokens):
 
 def fertilite(texte, fusions):
     """Nombre moyen de tokens par mot, les blancs n'étant pas des mots."""
-        
+    rangs = table_des_rangs(fusions)
     mots = [m for m in pretokeniser(texte) if not m.isspace()]
     nb_tokens = sum(len(encoder_mot(m, rangs)) for m in mots)
     return nb_tokens / len(mots)
