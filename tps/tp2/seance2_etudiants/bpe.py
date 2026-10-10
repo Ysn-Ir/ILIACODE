@@ -124,9 +124,9 @@ def encoder_mot(mot, rangs):
         for a, b in zip(symboles, symboles[1:])
             if (a, b)    in rangs]
         if not candidates:
-                break
-    _, paire = min(candidates)
-    symboles = list(fusionner_mot(paire, symboles))
+            break
+        _, paire = min(candidates)
+        symboles = list(fusionner_mot(paire, symboles))
     return symboles
 
 
