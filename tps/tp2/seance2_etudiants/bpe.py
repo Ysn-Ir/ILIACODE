@@ -31,7 +31,7 @@ def pretokeniser(texte):
         if re.fullmatch(r"\w+", morceau):
             for partie in re.split(r"(_)", morceau):      # garde les "_"
                 if partie:
-                    mots.append(partie)          # partie 2 du TP, à remplacer pour couper le camelCase
+                    mots.extend(p for p in re.split(CAMEL,partie ) if p)          # partie 2 du TP, à remplacer pour couper le camelCase
         else:
             mots.append(morceau)
     return mots
@@ -62,16 +62,27 @@ def compter_paires(corpus):
     """corpus = dictionnaire {suite de symboles (tuple) : fréquence du mot}.
     Renvoie le compte de chaque paire de symboles adjacents, pondéré par la
     fréquence des mots."""
-    raise NotImplementedError("partie 3 du TP")
-    counts={}
-    for pair in zip(corpus, corpus[1:]):
-        counts[pair]=counts.get(pair,0)+1
+    # raise NotImplementedError("partie 3 du TP")
+    paires = Counter()
+    for symboles, freq in corpus.items():
+        for i in range(len(symboles) - 1):
+            paires[(symboles[i], symboles[i + 1])] += freq
+    return paires
 
 
 def fusionner_mot(paire, symboles):
     """Remplace, dans une suite de symboles, chaque paire (a, b) adjacente
     par le symbole unique ab."""
-    raise NotImplementedError("partie 3 du TP")
+    a, b = paire
+    resultat, i = [], 0
+    while i < len(symboles):
+        if i < len(symboles) - 1 and symboles[i] == a and symboles[i + 1] == b:
+            resultat.append(a + b)
+            i += 2
+        else:
+            resultat.append(symboles[i])
+            i += 1
+    return tuple(resultat)
 
 
 def fusionner(paire, corpus):
@@ -89,7 +100,12 @@ def entrainer(mots, nb_fusions):
     corpus = {tuple(en_octets(mot)): freq for mot, freq in mots.items()}
     fusions = []
     for _ in range(nb_fusions):
-        raise NotImplementedError("partie 3 du TP, les trois gestes de la boucle")
+        paires = compter_paires(corpus)
+        if not paires:
+            break
+        meilleure = max(paires, key=lambda p: (paires[p], longueur(p[0] + p[1])))
+        corpus = fusionner(meilleure, corpus)
+        fusions.append(meilleure)
     vocabulaire = set(BASE) | {FIN} | {a + b for a, b in fusions}
     return fusions, vocabulaire
 
@@ -102,7 +118,16 @@ def table_des_rangs(fusions):
 def encoder_mot(mot, rangs):
     """Phase 2. Rejoue les fusions sur un mot, la plus anciennement apprise
     (rang le plus petit) d'abord, jusqu'à ce qu'aucune ne s'applique."""
-    raise NotImplementedError("partie 4 du TP")
+    symboles = en_octets(mot)
+    while len(symboles) > 1:
+        candidates = [(rangs[(a, b)], (a, b))
+        for a, b in zip(symboles, symboles[1:])
+            if (a, b)    in rangs]
+        if not candidates:
+                break
+    _, paire = min(candidates)
+    symboles = list(fusionner_mot(paire, symboles))
+    return symboles
 
 
 def encoder(texte, fusions):
@@ -116,12 +141,13 @@ def encoder(texte, fusions):
 
 def decoder(tokens):
     """Déplie chaque token en ses octets, relit en UTF-8, retire les marqueurs."""
-    raise NotImplementedError("partie 5 du TP")
+    texte = "".join(tokens).replace(FIN, "")
+    return texte.encode("latin-1").decode("utf-8")
 
 
 def fertilite(texte, fusions):
     """Nombre moyen de tokens par mot, les blancs n'étant pas des mots."""
-    raise NotImplementedError("partie 6 du TP")
+        
     mots = [m for m in pretokeniser(texte) if not m.isspace()]
     nb_tokens = sum(len(encoder_mot(m, rangs)) for m in mots)
     return nb_tokens / len(mots)
