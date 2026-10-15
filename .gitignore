@@ -11,3 +11,14 @@ mlruns/
 *.zip
 donnees/
 data/
+
+# Local virtualenvs and editor configs
+.venv/
+venv/
+.pytest_cache/
+.vscode/
+.idea/
+.DS_Store
+
+# Ignore copied seance2 folder used for local runs
+tps/seance2/
